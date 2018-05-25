@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2018 at 05:02 AM
+-- Generation Time: May 25, 2018 at 05:07 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -27,8 +27,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `date` (
-  `id` varchar(10) NOT NULL,
-  `Date` datetime NOT NULL,
+  `id` int(10) NOT NULL,
+  `Duration` datetime NOT NULL,
   `Note` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -39,11 +39,11 @@ CREATE TABLE `date` (
 --
 
 CREATE TABLE `dosen` (
-  `id_dosen` varchar(50) NOT NULL,
-  `Nama` varchar(100) NOT NULL,
+  `id_dosen` int(50) NOT NULL,
+  `id_status` int(50) NOT NULL,
+  `nama` varchar(100) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `id_status` varchar(50) NOT NULL
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -53,7 +53,7 @@ CREATE TABLE `dosen` (
 --
 
 CREATE TABLE `login` (
-  `id` varchar(50) NOT NULL,
+  `id` int(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL
@@ -68,7 +68,7 @@ CREATE TABLE `login` (
 CREATE TABLE `mahasiswa` (
   `nim` varchar(50) NOT NULL,
   `nama_lengkap` varchar(100) NOT NULL,
-  `Prodi` varchar(10) NOT NULL,
+  `prodi` varchar(10) NOT NULL,
   `tahun_masuk` int(5) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE `mahasiswa` (
 --
 
 CREATE TABLE `pendaftaran proposal` (
-  `id_proposal` varchar(50) NOT NULL,
+  `id_proposal` int(50) NOT NULL,
   `nim` varchar(50) NOT NULL,
   `file` varchar(50) NOT NULL,
   `judul fix` varchar(100) NOT NULL,
@@ -96,10 +96,10 @@ CREATE TABLE `pendaftaran proposal` (
 --
 
 CREATE TABLE `penelitian dosen` (
-  `id_penelitian` varchar(50) NOT NULL,
-  `id_dosen` varchar(50) NOT NULL,
-  `judul penelitian` int(100) NOT NULL,
-  `kuota` int(10) NOT NULL
+  `id_penelitian` int(50) NOT NULL,
+  `id_dosen` int(50) NOT NULL,
+  `judul_penelitian` varchar(200) NOT NULL,
+  `kuota` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -109,7 +109,7 @@ CREATE TABLE `penelitian dosen` (
 --
 
 CREATE TABLE `review judul` (
-  `id` varchar(10) NOT NULL,
+  `id` int(10) NOT NULL,
   `nim` varchar(50) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `deskripsi` varchar(500) NOT NULL,
@@ -124,11 +124,11 @@ CREATE TABLE `review judul` (
 --
 
 CREATE TABLE `status` (
-  `id_status` varchar(10) NOT NULL,
-  `Koordinator` varchar(10) NOT NULL,
-  `Dospem` varchar(10) NOT NULL,
-  `Reviewer` varchar(10) NOT NULL,
-  `Dosen_biasa` varchar(10) NOT NULL
+  `id_status` int(50) NOT NULL,
+  `koordinator` varchar(50) NOT NULL,
+  `reviewer` varchar(50) NOT NULL,
+  `dospem` varchar(50) NOT NULL,
+  `dosen_biasa` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -138,11 +138,11 @@ CREATE TABLE `status` (
 --
 
 CREATE TABLE `usulan final` (
-  `id` varchar(100) NOT NULL,
+  `id` int(100) NOT NULL,
   `nim` varchar(50) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `deskripsi` varchar(500) NOT NULL,
-  `usulan dosen` varchar(50) NOT NULL,
+  `usulan_dosen` varchar(50) NOT NULL,
   `jenis` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -153,7 +153,7 @@ CREATE TABLE `usulan final` (
 --
 
 CREATE TABLE `usulan final fix` (
-  `id` varchar(50) NOT NULL,
+  `id` int(50) NOT NULL,
   `nim` varchar(50) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `deskripsi` varchar(500) NOT NULL
@@ -166,11 +166,11 @@ CREATE TABLE `usulan final fix` (
 --
 
 CREATE TABLE `usulan judulan` (
-  `id` varchar(50) NOT NULL,
+  `id` int(50) NOT NULL,
   `nim` varchar(50) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `deskripsi` varchar(500) NOT NULL,
-  `Usulan dosen` varchar(50) NOT NULL,
+  `usulan_dosen` varchar(50) NOT NULL,
   `jenis` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -251,6 +251,55 @@ ALTER TABLE `usulan judulan`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `nim` (`nim`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `date`
+--
+ALTER TABLE `date`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `dosen`
+--
+ALTER TABLE `dosen`
+  MODIFY `id_dosen` int(50) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `pendaftaran proposal`
+--
+ALTER TABLE `pendaftaran proposal`
+  MODIFY `id_proposal` int(50) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `penelitian dosen`
+--
+ALTER TABLE `penelitian dosen`
+  MODIFY `id_penelitian` int(50) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `status`
+--
+ALTER TABLE `status`
+  MODIFY `id_status` int(50) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `usulan final`
+--
+ALTER TABLE `usulan final`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `usulan final fix`
+--
+ALTER TABLE `usulan final fix`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `usulan judulan`
+--
+ALTER TABLE `usulan judulan`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
