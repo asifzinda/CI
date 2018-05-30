@@ -120,22 +120,20 @@
 		  <form>
 
 			<caption><h2>Formulir Pengajuan Judul Penelitian</h2></caption>
+			
 			<tr><td><b>Nama</b></td><td> <input type="text" name="nama" size="30" maxlength="50"/></td></tr>
 			<br></br>
 			<tr><td><b>Judul</b></td><td> <textarea name="Judul" cols="30" rows="4"></textarea></td></tr>
 			<br></br>
-			<tr><td><b>Jenis TA<b></td><td>
+			<tr><td><b>Jenis TA<b></td>:<td>
 			<select name="jenis TA">
 			<option value="Pilih Jenis TA Anda">Pilih jenis TA</option>
-			<option value="multimedia">multimedia</option>
-			<option value="game">game</option>
-			<option value="sistem informasi">sistem informasi</option>
-			<option value="android">android</option>
-			<option value="media pembelajaran">media pembelajaran</option>
-			<option value="ecom">e-commers</option>
-			<option value="spk">spk</option>
-			
+			<option value="kelompok">kelompok</option>
+			<option value="individu">individu</option>
+			<br></br>
 			</select></td></tr>
+			<br></br>
+			<tr><td><b>Kuota</b></td><td> <input type="text" name="nama" size="30" maxlength="50"/></td></tr>
 			<br></br>
 			<tr><td><input type="submit" name="kirim" value="Daftar"/>
 			<input type="reset" name="Reset" id="button" value="Batal">

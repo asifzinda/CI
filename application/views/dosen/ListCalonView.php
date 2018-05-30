@@ -140,17 +140,12 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td> Fresh Web Development Resources </td>
-                    <td> http://www.egrappler.com/ </td>
-					 <td> http://www.egrappler.com/ </td>
+                    <td> Angga maulana </td>
+                    <td> desain 3d polije </td>
+					<td> sebagai media promosi polije </td>
                     <td class="td-actions"><a href="<?php echo base_url() ;?>/assets/javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
                   </tr>
-                  <tr>
-                    <td> Fresh Web Development Resources </td>
-                    <td> http://www.egrappler.com/ </td>
-					 <td> http://www.egrappler.com/ </td>
-                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
-                  </tr>
+                  
                 
                 </tbody>
               </table>
