@@ -6,8 +6,7 @@ class Usulan extends CI_Controller {
 		parent::__construct();
 	}
 
-	public function index()
-	{
+	public function index(){
 		$this->load->view("mahasiswa/usulanview");
 	}
 

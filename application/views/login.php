@@ -10,7 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>stylish Sign in and Sign up Form A Flat Responsive widget Template :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Sign in and Sign up " />
+<meta name="keywords" content="stylish Sign in and Sign up Form A Flat Responsive widget, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--online_fonts-->
 	<link href="//fonts.googleapis.com/css?family=Sansita:400,400i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
@@ -19,7 +19,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href="<?php echo base_url() ;?>/assets/css/stylelogin.css" rel='stylesheet' type='text/css' media="all" /><!--stylesheet-->
 </head>
 <body>
-<h1>Sign in and Sign up</h1>
+<h1>stylish Sign in and Sign up  form</h1>
 <div class="form-w3ls">
 	<div class="form-head-w3l">
 		<h2>s</h2>

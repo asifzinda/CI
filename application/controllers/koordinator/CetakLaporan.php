@@ -8,6 +8,7 @@ class CetakLaporan extends CI_Controller {
 
 	public function index(){
 		$this->load->view("koordinator/cetaklaporanview");
+		
 	}
 
 	

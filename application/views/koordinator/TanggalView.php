@@ -102,7 +102,19 @@
 					<li><a href="<?php base_url(); ?>Review"><img src="../assets/img/icon/review.png" height="35" width="30"><span>Review Judul</span> </a> </li>
 					<li   ><a href="<?php base_url(); ?>ListDosen"><img src="../assets/img/icon/listdosen.png" height="35" width="30"><span>List Dosen</span> </a> </li>
 					<li class="active"  ><a href="<?php base_url(); ?>Tanggal"><img src="../assets/img/icon/datetime.png" height="35" width="30"><span>Datetime</span> </a> </li>
-					<li ><a href="<?php base_url(); ?>CetakLaporan"><img src="../assets/img/icon/cetak.png" height="35" width="30"><span>Cetak Laporan</span> </a></li>
+					<li class=" dropdown">					
+					<a href="javascript:;" height="35" width="30" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="../assets/img/icon/cetak.png" height="35" width="30">
+						<span>Cetak Laporan</span>
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">
+                        <li><a href="<?php base_url();?> usulanjudulcon	">Usulan Judul</a></li>
+						<li><a href="<?php base_url();?> usulanfinalcon	">Usulan Final</a></li>
+                        <li><a href="<?php base_url();?> kartubimbingancon">Kartu Bimbingan</a></li>
+                    </ul>    				
+				</li>
 			</ul>
 
 		</div> <!-- /container -->
