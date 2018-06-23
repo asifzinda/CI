@@ -68,150 +68,53 @@
         </div>
         <!-- /subnavbar-inner -->
     </div>
-    <!-- /subnavbar -->
-    <div class="main">
-        <div class="main-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="span6">
-                        <div class="widget">
-                            <div class="widget-header">
-                                <i class="icon-bar-chart"></i>
-                                <h3>
-                                    Bar Chart</h3>
-                            </div>
-                            <!-- /widget-header -->
-                            <div class="widget-content">
-                                <canvas id="bar-chart" class="chart-holder" width="538" height="250">
-                                </canvas>
-                                <!-- /bar-chart -->
-                            </div>
-                            <!-- /widget-content -->
-                        </div>
-                        <!-- /widget -->
-                        <div class="widget">
-                            <div class="widget-header">
-                                <i class="icon-bar-chart"></i>
-                                <h3>
-                                    Line Chart</h3>
-                            </div>
-                            <!-- /widget-header -->
-                            <div class="widget-content">
-                                <canvas id="area-chart" class="chart-holder" width="538" height="250">
-                                </canvas>
-                                <!-- /line-chart -->
-                            </div>
-                            <!-- /widget-content -->
-                        </div>
-                        <!-- /widget -->
-                        <div class="widget">
-                            <div class="widget-header">
-                                <i class="icon-bar-chart"></i>
-                                <h3>
-                                    Pie Chart</h3>
-                            </div>
-                            <!-- /widget-header -->
-                            <div class="widget-content">
-                                <canvas id="pie-chart" class="chart-holder" width="538" height="250">
-                                </canvas>
-                                <!-- /pie-chart -->
-                            </div>
-                            <!-- /widget-content -->
-                        </div>
-                        <!-- /widget -->
-                    </div>
-                    <!-- /span6 -->
-                    <div class="span6">
-                        <div class="widget">
-                            <div class="widget-header">
-                                <i class="icon-bar-chart"></i>
-                                <h3>
-                                    Donut Chart</h3>
-                            </div>
-                            <!-- /widget-header -->
-                            <div class="widget-content">
-                                <canvas id="donut-chart" class="chart-holder" width="538" height="250">
-                                </canvas>
-                                <!-- /bar-chart -->
-                            </div>
-                            <!-- /widget-content -->
-                        </div>
-                        <!-- /widget -->
-                        <div class="widget">
-                            <div class="widget-header">
-                                <i class="icon-bar-chart"></i>
-                                <h3>
-                                    A Chart</h3>
-                            </div>
-                            <!-- /widget-header -->
-                            <div class="widget-content">
-                                <canvas id="line-chart" class="chart-holder" width="538" height="250">
-                                </canvas>
-                                <!-- /-chart -->
-                            </div>
-                            <!-- /widget-content -->
-                        </div>
-                        <!-- /widget -->
-                    </div>
-                    <!-- /span6 -->
-                </div>
-                <!-- /row -->
-            </div>
-            <!-- /container -->
-        </div>
-        <!-- /main-inner -->
-    </div>
-    <!-- /main -->
-    <div class="extra">
-        <div class="extra-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="span3">
-                        <h4>
-                            About Free Admin Template</h4>
-                        <ul>
-                            <li><a href="javascript:;">EGrappler.com</a></li>
-                            <li><a href="javascript:;">Web Development Resources</a></li>
-                            <li><a href="javascript:;">Responsive HTML5 Portfolio Templates</a></li>
-                            <li><a href="javascript:;">Free Resources and Scripts</a></li>
-                        </ul>
-                    </div>
-                    <!-- /span3 -->
-                    <div class="span3">
-                        <h4>
-                            Support</h4>
-                        <ul>
-                            <li><a href="javascript:;">Frequently Asked Questions</a></li>
-                            <li><a href="javascript:;">Ask a Question</a></li>
-                            <li><a href="javascript:;">Video Tutorial</a></li>
-                            <li><a href="javascript:;">Feedback</a></li>
-                        </ul>
-                    </div>
-                    <!-- /span3 -->
-                    <div class="span3">
-                        <h4>
-                            Something Legal</h4>
-                        <ul>
-                            <li><a href="javascript:;">Read License</a></li>
-                            <li><a href="javascript:;">Terms of Use</a></li>
-                            <li><a href="javascript:;">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <!-- /span3 -->
-                    <div class="span3">
-                        <h4>
-                            Open Source jQuery Plugins</h4>
-                        <ul>
-                            <li><a href="http://www.egrappler.com">Open Source jQuery Plugins</a></li>
-                            <li><a href="http://www.egrappler.com;">HTML5 Responsive Tempaltes</a></li>
-                            <li><a href="http://www.egrappler.com;">Free Contact Form Plugin</a></li>
-                            <li><a href="http://www.egrappler.com;">Flat UI PSD</a></li>
-                        </ul>
-                    </div>
-                    <!-- /span3 -->
-                </div>
-                <!-- /row -->
-            </div>
+   </div> <!-- /container -->
+	
+	</div> <!-- /subnavbar-inner -->
+
+</div> <!-- /subnavbar -->
+		
+
+    
+<div class="main">
+	
+	<div class="main-inner">
+
+	    <div class="container">
+	    	
+	     <body
+		  <form>
+
+			<caption><h2>Formulir Pendaftaran Seminar Proposal</h2></caption>
+			<tr><td><b>Nama</b></td><td> 	<input type="text" name="nama" size="30" maxlength="50"/></td></tr>
+			<br></br>
+			<tr><td><b>NIM</b></td><td> 	<input type="text" name="nama" size="30" maxlength="50"/></td></tr>
+			<br></br>
+			<tr><td><b>JUDUL</b></td><td> 	<input type="text" name="nama" size="30" maxlength="50"/></td></tr>
+			<br></br>
+			<tr><td><b>DESKRIPSI</b></td><td> <textarea name="Judul" cols="30" rows="4"></textarea></td></tr>
+			<br></br>
+			<tr><td><b>Jenis TA<b></td><td>
+			<select name="jenis TA">
+			<option value="Pilih Jenis TA Anda">Pilih jenis TA</option>
+			<option value="Individu">Individu</option>
+			<option value="Kelompok">Kelompok</option>
+
+			
+			</select></td></tr>
+			<br></br>
+			<tr><td><input type="submit" name="kirim" value="Daftar"/>
+			<input type="reset" name="Reset" id="button" value="Batal">
+			</td></tr>
+		</body>
+	      	
+	      
+	    </div> <!-- /container -->
+	    
+	</div> <!-- /main-inner -->
+    
+</div> <!-- /main -->
+    
             <!-- /container -->
         </div>
         <!-- /extra-inner -->
