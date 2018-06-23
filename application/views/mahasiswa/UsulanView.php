@@ -128,7 +128,9 @@
 			<br></br>
 			<tr><td><b>JUDUL</b></td><td> 	<input type="text" name="nama" size="30" maxlength="50"/></td></tr>
 			<br></br>
-			<tr><td><b>DESKRIPSI</b></td><td> <textarea name="Judul" cols="30" rows="4"></textarea></td></tr>
+			<tr><td><b>DESKRIPSI</b></td><td> <textarea name="Deskripsi" cols="30" rows="4"></textarea></td></tr>
+			<br></br>
+			<tr><td><b>USULAN DOSEN</b></td><td> 	<input type="text" name="nama" size="30" maxlength="50"/></td></tr>
 			<br></br>
 			<tr><td><b>Jenis TA<b></td><td>
 			<select name="jenis TA">

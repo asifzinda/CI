@@ -88,23 +88,23 @@
 			<caption><h2>Formulir Pendaftaran Seminar Proposal</h2></caption>
 			<tr><td><b>Nama</b></td><td> 	<input type="text" name="nama" size="30" maxlength="50"/></td></tr>
 			<br></br>
-			<tr><td><b>NIM</b></td><td> 	<input type="text" name="nama" size="30" maxlength="50"/></td></tr>
+			<tr><td><b>NIM</b></td><td> 	<input type="text" name="nim" size="30" maxlength="50"/></td></tr>
 			<br></br>
-			<tr><td><b>JUDUL</b></td><td> 	<input type="text" name="nama" size="30" maxlength="50"/></td></tr>
+			<tr><td><b>JUDUL</b></td><td> 	<input type="text" name="judul" size="30" maxlength="50"/></td></tr>
 			<br></br>
-			<tr><td><b>DESKRIPSI</b></td><td> <textarea name="Judul" cols="30" rows="4"></textarea></td></tr>
+			<tr><td><b>DESKRIPSI</b></td><td> <textarea name="deskripsi" cols="30" rows="4"></textarea></td></tr>
 			<br></br>
 			<tr><td><b>Jenis TA<b></td><td>
 			<select name="jenis TA">
 			<option value="Pilih Jenis TA Anda">Pilih jenis TA</option>
 			<option value="Individu">Individu</option>
 			<option value="Kelompok">Kelompok</option>
-
-			
 			</select></td></tr>
 			<br></br>
-			<tr><td><input type="submit" name="kirim" value="Daftar"/>
-			<input type="reset" name="Reset" id="button" value="Batal">
+			<tr><td><b>Dosen Pembimbing</b></td><td> 	<input type="text" name="dosenpembimbing" size="30" maxlength="50"/></td></tr>
+			<br></br>
+			<tr><td><input type="submit" value="Daftar"/>
+			<input type="reset" id="button" value="Batal">
 			</td></tr>
 		</body>
 	      	
