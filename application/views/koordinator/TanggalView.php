@@ -17,6 +17,19 @@
     <link href="<?php echo base_url(); ?>/assets/css/style.css" rel="stylesheet">
     
     <link href="<?php echo base_url(); ?>/assets/css/pages/reports.css" rel="stylesheet">
+	 
+	  <style type="text/css">
+       
+        .margin {
+            margin: 0px 800px 0px 180px;    
+        }
+		.margin2 {
+            margin: 0px 325px 0px 650px;    
+        }
+		.margin3 {
+			  margin: 0px 800px 0px 180px;
+		}
+    </style>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -102,19 +115,7 @@
 					<li><a href="<?php base_url(); ?>Review"><img src="../assets/img/icon/review.png" height="35" width="30"><span>Review Judul</span> </a> </li>
 					<li   ><a href="<?php base_url(); ?>ListDosen"><img src="../assets/img/icon/listdosen.png" height="35" width="30"><span>List Dosen</span> </a> </li>
 					<li class="active"  ><a href="<?php base_url(); ?>Tanggal"><img src="../assets/img/icon/datetime.png" height="35" width="30"><span>Datetime</span> </a> </li>
-					<li class=" dropdown">					
-					<a href="javascript:;" height="35" width="30" class="dropdown-toggle" data-toggle="dropdown">
-						<img src="../assets/img/icon/cetak.png" height="35" width="30">
-						<span>Cetak Laporan</span>
-						<b class="caret"></b>
-					</a>	
-				
-					<ul class="dropdown-menu">
-                        <li><a href="<?php base_url();?> usulanjudulcon	">Usulan Judul</a></li>
-						<li><a href="<?php base_url();?> usulanfinalcon	">Usulan Final</a></li>
-                        <li><a href="<?php base_url();?> kartubimbingancon">Kartu Bimbingan</a></li>
-                    </ul>    				
-				</li>
+					<li ><a href="<?php base_url(); ?>CetakLaporan"><img src="../assets/img/icon/cetak.png" height="35" width="30"><span>Cetak Laporan</span> </a></li>
 			</ul>
 
 		</div> <!-- /container -->
@@ -125,104 +126,159 @@
     
 
     
-<div class="main">
-	
-	<div class="main-inner">
+				
+					<div class="margin">
+						<form action="<?php echo site_url('koordinator/tanggal/insert_judul') ?>" method="post">
+						<h2>Usulan Judul : </h2>
+						<input type="date" name="Duration">
+					  	<input type="submit" name="judul" value="Simpan">   
+						</form>
+					
+			
+					<div class="info-box">
+              
+            <div class="widget-content">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th> Tanggal </th>
+                    <th> Note </th>
+                    <th class="td-actions"> Aksi </th>
+					
+                  </tr>
+                
+				    <?php
+				    
+						 foreach($date as $b):?>
+						 	 <tr>
+				                <td><?php echo $b->Duration; ?></td>
+								<td><?php echo $b->Note; ?></td>
+				              <td><a href=" <?php echo base_url('koordinator/tanggal/delete');?>/<?php echo $b->id; ?>
+                    "class="btn  btn-warning fa fa-trash-o"
+                    onClick="return confirm('Seurious?..')">
+                    Reset</a></td>
+				             </tr>
 
-	    <div class="container">
-	    	
-	     <div class="row">
-	      	
-	      	<div class="span12">
-	      
-	      	<div class="info-box">
-               <div class="row-fluid stats-box">
-                  <div class="span4">
-                  	<div class="stats-box-title">Vizitor</div>
-                    <div class="stats-box-all-info"><i class="icon-user" style="color:#3366cc;"></i> 555K</div>
-                    <div class="wrap-chart"><div id="visitor-stat" class="chart" style="padding: 0px; position: relative;"><canvas id="bar-chart1" class="chart-holder" height="150" width="325"></canvas></div></div>
-                  </div>
-                  
-                  <div class="span4">
-                    <div class="stats-box-title">Likes</div>
-                    <div class="stats-box-all-info"><i class="icon-thumbs-up"  style="color:#F30"></i> 66.66</div>
-                    <div class="wrap-chart"><div id="order-stat" class="chart" style="padding: 0px; position: relative;"><canvas id="bar-chart2" class="chart-holder" height="150" width="325"></canvas></div></div>
-                  </div>
-                  
-                  <div class="span4">
-                    <div class="stats-box-title">Orders</div>
-                    <div class="stats-box-all-info"><i class="icon-shopping-cart" style="color:#3C3"></i> 15.55</div>
-                    <div class="wrap-chart">
+					   <?php
+                endforeach; ?> 
+					    
+					  </thead>
+                
+              </table>
+            </div>
+         </div>	
+					
+					
+				 </div>
+			
+				<div class="margin2">
+						<form action="<?php echo site_url('koordinator/tanggal/insert_final') ?>" method="post">
+						<h2>Usulan Final : </h2>
+						<input type="date" name="Duration">
+					  	<input type="submit" name="judul" value="Simpan">  
+						</form>
+					
+			
+					<div class="info-box">
+              
+            <div class="widget-content">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th> Tanggal </th>
+                    <th> Note </th>
+                    <th class="td-actions"> Aksi </th>
+					
+                  </tr>
+                
+				    <?php
+				    
+						 foreach($final as $b):?>
+						 	 <tr>
+				                <td><?php echo $b->Duration; ?></td>
+								<td><?php echo $b->Note; ?></td>
+				              <td><a href=" <?php echo base_url('koordinator/tanggal/delete');?>/<?php echo $b->id; ?>
+                    "class="btn  btn-warning fa fa-trash-o"
+                    onClick="return confirm('Seurious?..')">
+                    Reset</a></td>
+				             </tr>
+
+					   <?php
+                endforeach; ?> 
+					    
+					  </thead>
+                
+              </table>
+            </div>
+         </div>	
+					
+					
+				 </div>
+					
+					
+				 </div>
+	
+				<div class="margin3">
+						<form action="<?php echo site_url('koordinator/tanggal/insert_sempro') ?>" method="post">
+						<h2>Usulan Sempro : </h2>
+						<input type="date" name="Duration">
+					  	<input type="submit" name="judul" value="Simpan">  
+						</form>
+					
+			
+					<div class="info-box">
+              
+            <div class="widget-content">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th> Tanggal </th>
+                    <th> Note </th>
+                    <th class="td-actions"> Aksi </th>
+					
+                  </tr>
+                
+				    <?php
+				    
+						 foreach($sempro as $b):?>
+						 	 <tr>
+				                <td><?php echo $b->Duration; ?></td>
+								<td><?php echo $b->Note; ?></td>
+				              <td><a href=" <?php echo base_url('koordinator/tanggal/delete');?>/<?php echo $b->id; ?>
+                    "class="btn  btn-warning fa fa-trash-o"
+                    onClick="return confirm('Seurious?..')">
+                    Reset</a></td>
+				             </tr>
+
+					   <?php
+                endforeach; ?> 
+					    
+					  </thead>
+                
+              </table>
+            </div>
+         </div>	
+					
+					
+				 </div>
+					
+				 </div>
+ 
                     
                     <div id="user-stat" class="chart" style="padding: 0px; position: relative;"><canvas id="bar-chart3" class="chart-holder" height="150" width="325"></canvas></div>
                     
-                    </div>
-                  </div>
-               </div>
-               
-               
-             </div>
-               
-               
-         </div>
-         </div>      
-	      	
+                   
+
 	  	  <!-- /row -->
 	
 	      <div class="row">
-	      	
-	      	<div class="span6">
-	      		
-	      		<div class="widget">
-						
-					<div class="widget-header">
-						<i class="icon-star"></i>
-						<h3>Some Stats</h3>
-					</div> <!-- /widget-header -->
-					
-					<div class="widget-content">
-						<canvas id="pie-chart" class="chart-holder" height="250" width="538"></canvas>
-					</div> <!-- /widget-content -->
-						
-				</div> <!-- /widget -->
-				
+	     
 	      		
 	      		
 	      		
 		    </div> <!-- /span6 -->
 	      	
 	      	
-	      	<div class="span6">
-	      		
-	      		<div class="widget">
-							
-					<div class="widget-header">
-						<i class="icon-list-alt"></i>
-						<h3>Another Chart</h3>
-					</div> <!-- /widget-header -->
-					
-					<div class="widget-content">
-						<canvas id="bar-chart" class="chart-holder" height="250" width="538"></canvas>
-					</div> <!-- /widget-content -->
-				
-				</div> <!-- /widget -->
-									
-		      </div> <!-- /span6 -->
-	      	
-	      </div> <!-- /row -->
-	      
-	      
-	      
-	      
-			
-	      
-	      
-	    </div> <!-- /container -->
-	    
-	</div> <!-- /main-inner -->
-    
-</div> <!-- /main -->
-    
 
     
 
@@ -296,7 +352,7 @@
 			<div class="row">
 				
     			<div class="span12">
-    				&copy; 2013 <a href="http://www.egrappler.com/">Bootstrap Responsive Admin Template</a>.
+    				&copy; 2013 Bootstrap Responsive Admin Template.
     			</div> <!-- /span12 -->
     			
     		</div> <!-- /row -->
@@ -357,7 +413,9 @@
 	
 	</script>
 
-
+		</div>
+	</div>
+	</div>
   </body>
 
 </html>
