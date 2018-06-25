@@ -11,6 +11,12 @@
         rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/font-awesome.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/style.css" rel="stylesheet">
+	 <style type="text/css">
+       
+        .margin {
+            margin: 0px 100px 100px 95px;    
+       
+    </style>
     
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -56,8 +62,8 @@
         <div class="subnavbar-inner">
             <div class="container">
                 <ul class="mainnav">
-                <li><a href="<?php base_url(); ?>home"><img src="<?php echo base_url(); ?>assets/img/icon/home.png" height="35" width="30"><span>Dashboard</span> </a> </li>
-				<li ><a href="<?php base_url(); ?>penelitian"><img src="<?php echo base_url(); ?>assets/img/icon/judulpenelitian.png" height="35" width="30"><span>Judul Penelitian</span> </a> </li>
+                <li><a href="<?php echo base_url(); ?>home"><img src="<?php echo base_url(); ?>assets/img/icon/home.png" height="35" width="30"><span>Dashboard</span> </a> </li>
+				<li ><a href="<?php base_url(); ?>penelitian"><img src="<?php echo base_url(); ?>/assets/img/icon/judulpenelitian.png" height="35" width="30"><span>Judul Penelitian</span> </a> </li>
 				<li  ><a href="<?php base_url(); ?>listcalon"><img src="<?php echo base_url(); ?>assets/img/icon/listcalon.png" height="35" width="30"><span>List Calon Bimbingan</span> </a></li>
 				<li class="active"><a href="<?php base_url(); ?>Review"><img src="<?php echo base_url(); ?>assets/img/icon/review.png" height="35" width="30"><span>Review Judul</span> </a> </li>
                 </ul>
@@ -69,44 +75,32 @@
     <!-- /subnavbar -->
     <html>
 <head>
-<title>Review Judul Tugas Akhir</title>
+<title>Edit Review Judul Tugas Akhir</title>
 <link type="text/css" rel="stylesheet" href="<? echo base_url(); ?>includes/css/bootstrap.css" />
 </head>
 
 <body>
+	<div class="margin">
 <div class="row uppermost">
 <div class="col-md-offset-1 col-md-10 boxing content-title"><center><h2></h2></center></div>
 </div>
 
-<center><table border="1"> 
-	<thead> <b> <tr>
-		<th>NIM</th>
-		<th>Nama</th>
-		<th>Judul</th>
-		<th>Deskripsi</th>
-		<th>Saran</th>
-		<th>Keterangan</th>
-		<th>Opsi</th>
-	</tr> </b> </thead>
+	<?php echo form_open('reviewer/Review/save_editTampil');
 	
-	<tbody> 
-	<tr> 
-				<?php foreach($review_judul as $view){ ?>
-				<td> <?php echo $view->nama_pelengkap ?> </td>
-				<td> <?php echo $view->nim ?></td>
-				<td> <?php echo $view->judul ?> </td>
-				<td> <?php echo $view->deskripsi ?> </td>
-				<td> <?php echo $view->saran ?> </td>
-				<td> <?php echo $view->keterangan ?> </td>
-				<td> <?php echo anchor('reviewer/Review/editTampil/'.$view->id,'Review'); ?> </td>
-				
-				
-	<?php } ?>
+	echo form_hidden('id', $this->uri->segment(4));
 	
-	</tbody>
-	</center>
-</table>
-			
+	?>
+	
+	Nim   :   <input type='text' value="<?php echo $x['nim'];?>" disabled><br>
+	Nama   :   <input type='text' value="<?php echo $x['nama_pelengkap'];?>" disabled><br>
+	Judul   :   <input type='text' value="<?php echo $x['judul'];?>" disabled><br>
+	Deskripsi   :   <input type='text' value="<?php echo $x['deskripsi'];?>" disabled><br>
+	Saran   :   <input type='text' name="saran"><br>
+	Keterangan   :   <input type='text' name="keterangan">
+	
+			<tr><td><input type="submit" name="kirim" value="Kirim	"/>
+	</div>
+   
     <!-- Placed at the end of the document so the pages load faster -->
     <script  src="<?php echo base_url(); ?>/assets/js/jquery-1.7.2.min.js"></script>
     <script  src="<?php echo base_url(); ?>/assets/js/excanvas.min.js"></script>
