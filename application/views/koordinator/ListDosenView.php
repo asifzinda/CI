@@ -131,57 +131,143 @@
 	<div class="main-inner">
 
 	    <div class="container">
-	    		     <div class="row">
+	    	
+	     <div class="row">
 	      		      	<div class="span12">
 	      
-	      	<div class="info-box">
+	      	<div class="info-box">   
               <!-- /widget -->
+          <div class="widget widget-table action-table">
             <div class="widget-header"> <i class="icon-th-list"></i>
               <h3>List Dosen</h3>
             </div>
             <!-- /widget-header -->
             <div class="widget-content">
               <table class="table table-striped table-bordered">
-                <thead>
+                <thead> 
                   <tr>
                     <th> Nama Dosen </th>
-                    <th> Dosen Prodi </th>
-                    <th class="td-actions"> Aksi </th>
-					
+					<th> Prodi </th>
+					<th> Kuota </th>
+					<th> Level </th>
+                    <th class="td-actions"> Pilihan </th>
                   </tr>
                 </thead>
                 <tbody> 
-                  <tr>
-                    <td> Abdul </td>
-                    <td> MIF </td>
-					<td class= "td-actions"> <a href="<?php echo base_url(); ?>/koordinator/EditListDosenCon" class="btn btn-default" data-toggle="modal" data-target="#myModal" value="Edit">Edit</a></td>
-                    
-                  </tr>
-                  <tr>
-                    <td> Parampa </td>
-                    <td> TKK </td>
-                    <td class= "td-actions"> <a href="javascript:;" class="btn btn-default" data-toggle="modal" data-target="#myModal">Edit</a></td>
-                  </tr>
-				  
-				   <tr>
-                    <td> Putri Oktavia Gupitasari</td>
-                    <td> MIF </td>
-					<td class= "td-actions"> <a href="javascript:;" class="btn btn-default" data-toggle="modal" data-target="#myModal">Edit</a></td>
-                    
-                  </tr>
+				
+				<tr>
+				   <?php foreach($dosen as $u) { ?>
+				   	<input type="hidden" name="id_dosen" value="<?php echo $u->id_dosen ?>">
+                    <td> <?php echo $u-> nama ?> </td>
+					<td> <?php echo $u-> prodi ?> </td>
+					<td> <?php echo $u-> kuota ?> </td>
+					<td> <?php echo $u-> level ?> </td>
+					<td><a href= "<?php echo base_url('koordinator/ListDosen/edit/'.$u->id_dosen); ?>" target= "blank" data-toggle= "tooltip" data-placement="bottom" 
+					title="List Dosen" data-original-title="Tooltip on bottom" class="btn btn-warning"><i class= "fafa-edit"></i> Edit </a></td>
+				</tr>
+				   <?php } ?>
+				
                 </tbody>
               </table>
             </div>
-         </div>	
+           
+            <!-- /widget-content --> 
+         </div>
+         </div>	      	
 	    </div> <!-- /row -->
-	    </div> <!-- /container -->  
+	    </div> <!-- /container -->
+	    
+	</div> <!-- /main-inner -->
+    
 </div> <!-- /main -->
+    
 
     
+
+<div class="extra">
+
+	<div class="extra-inner">
+
+		<div class="container">
+
+			<div class="row">
+                    <div class="span3">
+                        <h4>
+                            About Free Admin Template</h4>
+                        <ul>
+                            <li><a href="javascript:;">EGrappler.com</a></li>
+                            <li><a href="javascript:;">Web Development Resources</a></li>
+                            <li><a href="javascript:;">Responsive HTML5 Portfolio Templates</a></li>
+                            <li><a href="javascript:;">Free Resources and Scripts</a></li>
+                        </ul>
+                    </div>
+                    <!-- /span3 -->
+                    <div class="span3">
+                        <h4>
+                            Support</h4>
+                        <ul>
+                            <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                            <li><a href="javascript:;">Ask a Question</a></li>
+                            <li><a href="javascript:;">Video Tutorial</a></li>
+                            <li><a href="javascript:;">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <!-- /span3 -->
+                    <div class="span3">
+                        <h4>
+                            Something Legal</h4>
+                        <ul>
+                            <li><a href="javascript:;">Read License</a></li>
+                            <li><a href="javascript:;">Terms of Use</a></li>
+                            <li><a href="javascript:;">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <!-- /span3 -->
+                    <div class="span3">
+                        <h4>
+                            Open Source jQuery Plugins</h4>
+                        <ul>
+                            <li><a href="http://www.egrappler.com">Open Source jQuery Plugins</a></li>
+                            <li><a href="http://www.egrappler.com;">HTML5 Responsive Tempaltes</a></li>
+                            <li><a href="http://www.egrappler.com;">Free Contact Form Plugin</a></li>
+                            <li><a href="http://www.egrappler.com;">Flat UI PSD</a></li>
+                        </ul>
+                    </div>
+                    <!-- /span3 -->
+                </div> <!-- /row -->
+
+		</div> <!-- /container -->
+
+	</div> <!-- /extra-inner -->
+
+</div> <!-- /extra -->
+
+
+    
+    
+<div class="footer">
+	
+	<div class="footer-inner">
+		
+		<div class="container">
+			
+			<div class="row">
+				
+    			<div class="span12">
+    				&copy; 2013 <a href="http://www.egrappler.com/">Bootstrap Responsive Admin Template</a>.
+    			</div> <!-- /span12 -->
+    			
+    		</div> <!-- /row -->
+    		
+		</div> <!-- /container -->
+		
+	</div> <!-- /footer-inner -->
+	
+</div> <!-- /footer -->
     
 
 <script src="<?php echo base_url(); ?>/assets/js/jquery-1.7.2.min.js"></script>
-<script src="<?php echo base_url(); ?>/assets/js/excanvas.min.js"></script>nbvi  
+<script src="<?php echo base_url(); ?>/assets/js/excanvas.min.js"></script>
 <script src="<?php echo base_url(); ?>/assets/js/chart.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>/assets/js/bootstrap.js"></script>
 <script src="<?php echo base_url(); ?>/assets/js/base.js"></script>
